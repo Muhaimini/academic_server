@@ -29,6 +29,19 @@ POST http://127.0.0.1:5000/api/v1/periodes
 Content-Type: application/json
 
 {
-    "label": "2026 - 2029",
-    "desc": "Angkatan III"
+    "label": "2029 - 2032",
+    "desc": "Angkatan IV"
 }
+
+###
+PUT http://127.0.0.1:5000/api/v1/periodes/3eda18ff-ff34-4a1a-90c8-d362120b49a9
+Content-Type: application/json
+
+{
+    "label": "2032 - 2035",
+    "desc": "Angkatan IV"
+}
+
+###
+DELETE http://127.0.0.1:5000/api/v1/periodes/3eda18ff-ff34-4a1a-90c8-d362120b49a9
+Content-Type: application/json

@@ -29,6 +29,26 @@ module ResponseHandler extend ActiveSupport::Concern
     end
   end
 
+  def update
+    data = self.class.target_class.find_by(id: params[:id])
+    if data
+      data.update(@model_params)
+      success_response(data)
+    else
+      error_response(nil, :not_found, "Failed to update the record")
+    end
+  end
+
+  def destroy
+    data = self.class.target_class.find_by(id: params[:id])
+    if data
+      data.destroy
+      render json: { message: "The record successfully deleted" }
+    else
+      error_response(nil, :not_found, "Failed to delete the record")
+    end
+  end
+
   private
 
   def default_response(data)
