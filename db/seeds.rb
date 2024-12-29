@@ -7,3 +7,28 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+if Api::V1::Periode.count.zero?
+  Api::V1::Periode.create!([
+    { label: "2020 - 2023", desc: "Angkatan I" },
+    { label: "2023 - 2026", desc: "Angkatan II" }
+  ])
+  puts "Periode created!"
+else
+  puts "Skip creating periode..."
+end
+
+if Api::V1::AcademicYear.count.zero?
+  Api::V1::AcademicYear.create!([
+    { label: "2020" },
+    { label: "2021" },
+    { label: "2022" },
+    { label: "2023" },
+    { label: "2024" },
+    { label: "2025" },
+    { label: "2026" }
+  ])
+  puts "Academic years created!"
+else
+  puts "Skip creating academic years..."
+end

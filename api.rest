@@ -1,0 +1,34 @@
+### Academic Years ###
+GET http://127.0.0.1:5000/api/v1/academic_years
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:5000/api/v1/academic_years/0fd6ebb5-fce3-433f-afc6-effe60c708e9
+Content-Type: application/json
+
+###
+POST http://127.0.0.1:5000/api/v1/academic_years
+Content-Type: application/json
+
+{
+    "label": "2027"
+}
+
+
+
+### Periodes ###
+GET http://127.0.0.1:5000/api/v1/periodes
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:5000/api/v1/periodes/22e46e6b-c4ce-41b6-bf14-e901c5819bd7
+Content-Type: application/json
+
+###
+POST http://127.0.0.1:5000/api/v1/periodes
+Content-Type: application/json
+
+{
+    "label": "2026 - 2029",
+    "desc": "Angkatan III"
+}
