@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_12_29_115421) do
+ActiveRecord::Schema[7.2].define(version: 2024_12_30_091249) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -41,6 +41,15 @@ ActiveRecord::Schema[7.2].define(version: 2024_12_29_115421) do
   create_table "api_v1_classrooms", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "teachers_id", null: false
     t.string "academic_years_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "api_v1_identities", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "city", null: false
+    t.string "province", null: false
+    t.string "nationality", default: "WNI", null: false
+    t.string "details"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
