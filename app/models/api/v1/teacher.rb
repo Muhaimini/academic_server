@@ -8,7 +8,7 @@ class Api::V1::Teacher < ApplicationRecord
   def as_json(options = {})
     super(options).merge(
       role: role&.role,
-      subjects: teacher_subject.as_json(except: [ :teachers_id ])
+      # subjects: teacher_subject.as_json(except: [ :teachers_id ])
     )
   end
 end
