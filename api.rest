@@ -45,3 +45,39 @@ Content-Type: application/json
 ###
 DELETE http://127.0.0.1:5000/api/v1/periodes/3eda18ff-ff34-4a1a-90c8-d362120b49a9
 Content-Type: application/json
+
+### TEACHERS ###
+GET http://127.0.0.1:5000/api/v1/teachers
+Content-Type: application/json
+
+###
+GET http://127.0.0.1:5000/api/v1/teachers/8fe28147-7eba-4250-81e6-41b27566009f
+Content-Type: application/json
+
+
+### STUDENTS ###
+GET http://127.0.0.1:5000/api/v1/students/a267a12d-f71b-47c9-bb81-f087670c362c
+Content-Type: application/json
+
+###
+POST http://127.0.0.1:5000/api/v1/roles
+Content-Type: application/json
+
+{
+    "user_id": "8fe28147-7eba-4250-81e6-41b27566009f",
+    "role": "teacher"
+}
+
+###
+GET http://127.0.0.1:5000/api/v1/roles
+Content-Type: application/json
+
+
+### SUBJECTS ###
+GET http://127.0.0.1:5000/api/v1/subjects
+Content-Type: application/json
+
+
+### TEACHER SUBJECTS ###
+GET http://127.0.0.1:5000/api/v1/teacher_subjects
+Content-Type: application/json

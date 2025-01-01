@@ -1,7 +1,7 @@
 class Api::V1::PeriodesController < ApplicationController
   include ResponseHandler
 
-  before_action :periode_params
+  before_action :periode_params, except: [ :index, :show ]
   set_model_class(Api::V1::Periode)
 
   private

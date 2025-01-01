@@ -1,7 +1,7 @@
 class Api::V1::AcademicYearsController < ApplicationController
   include ResponseHandler
 
-  before_action :academic_year_params
+  before_action :academic_year_params, except: [ :index, :show ]
   set_model_class(Api::V1::AcademicYear)
 
   private
