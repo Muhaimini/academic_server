@@ -60,7 +60,7 @@ module ResponseHandler extend ActiveSupport::Concern
   end
 
   def success_response(data = nil, status = :ok)
-    render json: { data: data }, status: status
+    render json: data, status: status
   end
 
   def error_response(errors = nil, status = :unprocessable_entity, message = "Error")
